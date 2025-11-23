@@ -55,6 +55,7 @@ struct Engine {
             return false;
         }
         heap[*pos].deleted = true;
+        idIndex.erase(id);
         return true;
     }
 
