@@ -65,13 +65,15 @@ struct Engine {
         //TODO
         idIndex.resetMetrics(); // reset count first
         int* pos = idIndex.find(id); // search heap position and save as pointer
-        cmpOut = idIndex.comparisons; // get comparison counts
         if (pos == nullptr){ //id not found
+            cmpOut = idIndex.comparisons; // get comparison counts
             return nullptr;
         }
         if (*pos < 0 || *pos >= (int)heap.size() || heap[*pos].deleted){
+            cmpOut = idIndex.comparisons;
             return nullptr;
         }
+        cmpOut = idIndex.comparisons;
         return &heap[*pos]; //if everything is fine return record pointer
     }
 
