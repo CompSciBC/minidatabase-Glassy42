@@ -1,0 +1,12 @@
+- What challenges you faced
+I initially struggled to understand how the whole system fit together, especially with the three separate data structures (the heap, the ID index, and the last name index) and the overall code structure.
+I also ran into some bugs when working on the index lookup. (debugging was a bit challenging)
+At first, I tried to fix the issue by only editing that one method, but the real problem was that I wasn’t removing the ID from the delete method. 
+As a result, the record was still searchable, which caused several test failures. 
+On top of that, I’m still somewhat confused about C++ pointers and dereferencing, especially when it comes to deciding whether I’m working with an address or the actual data.
+
+- What you learned
+I learned more about lambda functions in C++, specifically that they can be defined inside a function and passed as parameters, which makes the code more flexible.
+Through testing and debugging, I went through the code line by line to track down errors. 
+That process really helped me understand what each part of the code was doing and how the different data structures interacted with each other.
+
